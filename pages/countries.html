@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/finder.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Finder | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+</head>
+  <body>
+    <div id="app" class="app">
+      
+      <div class="main countries-container w-4/5 mx-auto pt-24 flex flex-col items-center">
+        <h1 class="text-6xl mt-8 mb-4"><span class="bg-green pl-2 color-darkgreen rounded-lg">Compare</span>  countries</h1>
+        <p class="w-1/2 text-center">Analyze and compare key statistics and information about countries around the world. Get insights on population, geography, economy, and more to make informed decisions</p>
+        <form class="w-1/3 mx-auto flex flex-col mt-12" id="compare-countries">
+            <label for="first-city" class="mb-2 text-xl">First country</label>
+            
+            <div class="relative w-full">
+                <input type="text" name="first-city" id="first-city" class="mb-4 p-2 text-black rounded-lg w-full country-input" placeholder="First city" required>
+                
+                <div class="flex flex-col border p-2 rounded-md city-select select-1 hidden">
+                    
+                </div>
+            </div>
+            
+            <label for="second-city" class="mb-2 text-xl">Second country</label>
+            
+            <div class="relative w-full">
+                <input type="text" name="second-city" id="second-city" class="mb-8 p-2 text-black rounded-lg w-full country-input" placeholder="second city" required>
+                <div class="flex flex-col border p-2 rounded-md city-select select-2 hidden">
+                    
+                </div>
+            </div>
+
+            <button type="submit" class="bg-green p-2 rounded-lg font-semibold text-xl submit-compare">Compare</button>
+
+        </form>
+
+        <div class="w-full mt-16 results-title-container">
+            <div class="text-2xl results-title hidden">Comparison Results</div>
+        </div>
+        
+
+        <div class="compare-results w-full mt-4 flex gap-8 pb-12">
+            <div class="compare-left flex-1">                
+
+            </div>
+            <div class="compare-right flex-1">
+               
+            </div>
+
+
+        </div>
+
+        <div class="w-full capital-city-details hidden flex flex-col items-center"> 
+            
+            <div class="text-2xl results-title mt-8 mb-4">Costs of Living in Capitals</div>
+
+            <div class="cities-loader mt-12 hidden"></div>
+    
+            <div class=" capital-data-header border-b border-gray-500 pb-2 w-3/4 flex my-4 font-semibold text-xl">
+                <div class="w-1/2">Item</div>
+                <div class="w-1/4 city-one cities-header-cell">City 1</div>
+                <div class="w-1/4 city-two cities-header-cell">City 2</div>
+            </div>
+    
+            <div class="capital-data w-3/4">
+                <span>No data</span>    
+            </div>
+
+        </div>
+
+
+
+
+
+      </div>
+
+      <div class="text-center footer">&copy;2023 City Finder. All Rights Reserved</div>
+
+
+    </div>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
