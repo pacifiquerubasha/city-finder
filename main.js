@@ -1,4 +1,3 @@
-import './style.css'
 
 const app = document.querySelector('.app');
 const navigation = `
@@ -28,9 +27,9 @@ const navigation = `
 
           <div class="flex items-center w-3/5 flex gap-12 text-xl nav-items ">
             <a href="/" class="">Home</a>
-            <a href="../pages/countries.html" class="">Compare</a>
-            <a href="../pages/about.html" class="">About Us</a>
-            <a href="../pages/contact.html" class="">Contact Us</a>
+            <a href="countries.html" class="">Compare</a>
+            <a href="about.html" class="">About Us</a>
+            <a href="contact.html" class="">Contact Us</a>
 
           </div>
         </div>  
